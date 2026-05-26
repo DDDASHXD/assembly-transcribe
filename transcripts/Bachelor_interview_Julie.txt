@@ -1,0 +1,105 @@
+Christoffer: Din første opgave er, at du skal tænke på et program, en app eller en online service fra USA eller lignende. Og så skal du prøve at finde et europæisk alternativ til den her app igennem vores prototype. Mens du gør det, skal du huske at forklare dine tanker højt. Du skal prøve at beskrive, hvad det er, du kigger efter, og hvad der føles klart og uklart.
+
+Julie: Okay. Først tænker jeg på Outlook fra Microsoft. Fordi jeg bruger det meget, både på arbejde og i skole. Så hvis jeg lige kigger på den her side, så ville jeg nok lede efter noget med mail. Og så kan jeg så se, at der er en, der hedder e-mail. Det virker jo ret oplagt at skulle trykke på den. Og så kan jeg se, der dukker nogle forskellige muligheder op. Og der vil jeg nok igen lade efter noget, der hedder male, fordi det er det, der giver bedst mening for mig. Og der kan jeg så se, at der i hvert fald er to, der hedder noget med mail. Og for en af dem står der også, eller for flere af dem står der også noget med kalender. Hvilket også er vigtigt for mig, fordi jeg også bruger kalenderfunktionen i Outlook. Så jeg ville måske trykke på den her mail fence. Ja.
+
+Christoffer: Ja, afgør to. Nu skal du prøve at compare det alternativ, der lige har dukket op. Her har den jo så godt nok sagt gmail i stedet for outlook, men det er fordi vi ikke har navigeret igennem outlook. Så her bruger vi gmail for din mest standard løsning. Og så skal du prøve at se, om du kan samle to. Det du skal kigge efter, det er sådan nogle ting, der interesserer dig. Det kan være f.eks.
+
+Julie: prisen,
+
+Christoffer: funktionaliteterne, hvordan de comparer til hinanden, tillid eller sikkerhed bag det. Hvad synes du er vigtigt for den her app? Først tænker
+
+Julie: jeg på pris, og det kan jeg se dukker op som noget af det første i beskrivelsen. Og der står freemium, hvilket jeg tænker lyder ret godt, da jeg ikke har lyst til at bruge penge på at finde en alternativ. Og så kan jeg se under land, at der står det er fra Belgien i stedet for USA, som Gmail er. Og det tænker jeg er godt, fordi jeg netop gerne vil være væk fra de amerikanske platforme og apps. Så ja, derfor er jeg glad for at høre, at det er fra Belgien, og at det dermed er et europæisk alternativ. Så kan jeg se, at i stedet for at være under US law, så er den under Belgian law og GDPR. Og der tænker jeg jo egentlig bare på, at der står GDPR. Fordi det er også noget jeg hører rigtig meget om på arbejde selvfølgelig Og okay, der er meget til at vide at det er helt vildt vigtigt at overholde GTPR reglerne Så det er et meget vigtigt kryds i min box Og så kan jeg se, at der står, at den er established, og også ret vigtigt, så det ikke virker som, at det er bare noget nyt, som de måske ikke rigtig ved, hvad de lige laver. Så føles det lidt mere troværdigt, og som noget, jeg vil føle mig mere sikker i. Og så kan jeg se, at den funktionelle match ligger på 82 ud af 100, hvilket er relativt højt. Alt over 80 vil jeg i hvert fald tænke er godt. Fordi så er der i hvert fald mange ting, der minder om hinanden. Ja. Skal jeg rulle længere nu?
+
+Christoffer: Du, få den til dig bare med
+
+Julie: at kigge. Så kan jeg se, at der står Key Features. Der står igen det der med Integrated Calendar og En Context, hvilket er rigtig godt, fordi det er noget, jeg skal bruge i det alternativ, jeg skal finde. Groups for Teams, det lyder også virkelig godt. Ja. Known Issues. Der står, at man ikke kan bruge den på mobilapp. Men det er egentlig fint, for jeg bruger det kun på computeren, så det er ikke noget, der vil være et problem for mig. Så ja, det virker meget godt.
+
+Christoffer: Jamen så synes jeg faktisk bare, at du skal prøve at explore til det næste step. Altså prøv lige at forestille dig, at du er interesseret i at prøve det her alternativ, som du har fundet. Og nu skal du prøve at finde ud af, hvad skal du gøre fra nu, for ligesom at komme videre herfra?
+
+Julie: Altså for at indskrive det. Gå fra,
+
+Christoffer: at nu har du sammenlignet dem til, at hvordan kommer jeg videre
+
+Julie: herfra? Jamen, der vil jeg nok tænke, at jeg skulle måske visite official site. Så klikker jeg på den. Og der kan jeg altså se, at der står Secure Private E-mail Service. Hvilket lyder rigtig godt. Fordi der har vi sikkerhed. Og vi har e-mail, som var to rigtig vigtige ord, jeg ledte efter. Det er helt indledningsvist. Og så kan jeg jo se, at der står Sign Up. Så det kunne faktisk ikke være mere simpelt. Hvis jeg føler, at jeg var klar til det, så ville jeg da bare trykke på den gule knap der. Det er jo også noget, der springer i øjnene, kan man sige. Med farven. Ja, perfekt. Jamen
+
+Christoffer: så har vi nogle spørgsmål til sidst her. Det første jeg gerne vil spørge om, det var, lå du mærke til den her funktion, hvor du kan se, how to migrate?
+
+Julie: Øh, det var faktisk ikke noget, jeg tænkte over.
+
+Christoffer: Nej, det er rigtig godt, vi ved det, for det er så nemlig noget, vi skal gøre noget ved. Så det er mere tydeligt. Ja. Fordi det er ligesom det, der hjælper folk med at migrere hen. Det er måske noget med farven, hun har gjort. Den næste funktion lå du mærke til, at der var en fuld feature
+
+Julie: comparison mulighed. Øh, nej. Men jeg har det også med at skimmesyde
+
+Christoffer: ret meget. Ja, det er der mange, der gør, så det er perfekt. Vi skal bruge det, så vi kan gøre det mere tydeligt, for der er nemlig sådan fuld overblik over de forskellige funktioner, de forskellige
+
+Julie: har. Og det fungerer faktisk rigtig godt. Selve det her overblik. Det er jo meget tydeligt, hvornår et feature er present. Ja,
+
+Christoffer: lige præcis. Så vil jeg gerne stille det næste spørgsmål. Hvad var dit overall impression af vores hjemmeside? Hvad synes du var den fornemmelse, du fik af den? Det var meget
+
+Julie: troværdigt nok, fordi det var meget simpelt. Altså, kan man gå tilbage til startsiden på en eller anden måde? Det var deroppe, ja. Det gav ret god mening. Jeg tænker, at ud fra overskriften er det meget tydeligt, hvilken side man er inde på. Ja, det er jo præcis det, man søger. Og så er der en søgefunktion, hvilket jeg godt kan lide. Fordi nogle gange, hvis man har travlt, så skal det bare gå lidt hurtigt. Og hvis man måske ikke helt ved, hvad man leder efter, så kommer der de her kategorier, hvilket jeg rigtig godt kan lide. Jeg elsker kategorier, fordi det gør det meget nemt. Og nogle gange, så ved man ikke præcis, hvad man leder efter. Hvis man gerne vil vække for flere. Altså, amerikanske sider er ikke kun ligesom en enkelt, som det eksempel vi gik ud fra til starten. Det er fedt,
+
+Christoffer: for jeg havde først tænkt mig at spørge dig om, hvorfor du bedst kunne lide kategorierne. Det er nemlig fedt. Tak. Hvordan gik det omkring at finde noget relevant? Nu snakker du om, at du brugte search, eller du så searchbaren, men du brugte den ikke, men du kiggede på kategorierne i stedet. Ja. Var der eventuelt noget andet funktion, du gerne ville bruge til at finde frem til noget? F.eks. et filtersystem?
+
+Julie: Filtrering? Altså, som jeg ser det lige nu, så er der ikke flere klubber, end dem, der er her. Så jeg synes ikke, at det er nødvendigt. Men hvis der kommer flere, end der er nu her, så vil det helt sikkert være en fordel at tilføje filter. Men jeg synes, at det er et overblik også, fordi de forskellige kategorier har forskellige farver, så det er ikke sådan, at man bare tænker, at der er alt for meget der, og det er mega uoverskueligt. Og så har de også nogle titler, som bare giver mening. Meget simpelt, men også tydeligt. Var
+
+Christoffer: der et tidspunkt, hvor du var usikker på, hvad du skulle gøre som det næste? Nej, det tror
+
+Julie: jeg ikke. Jeg klikkede her på e-mail, og det var nok der, jeg var mest i tvivl, for så kom der nogle forskellige tanker frem, og nogle af dem har navne som tuta og positive, hvor jeg har ingen ide om, hvad det indebærer. Og det er jo netop også derfor, jeg valgte at gå med dem, der indeholdte ord og mail. Altså de andre sikkert også er gode på andre måder, og sikkert også er noget med male. Så det var nok der, jeg blev mere sådan, uff, hvad for en skal jeg lige vælge? Men så da jeg så kom ind på den male-fens der, det synes jeg nok var det bedste af det hele. Altså oplevelsesmæssigt. Jeg kan rigtig godt lide den her feature-boks, der kom frem. Jeg synes den var virkelig
+
+Christoffer: overskuelig. Fint. Jamen, jeg så nemlig, du sådan, hvordan du, og jeg observerede lidt, hvad det er, du gjorde her. Og det ene ting, jeg så, det var faktisk, at du kiggede på descriptionen først. Altså, forklaringen af malefins frem for tekstene. Er der en bestemt årsag for, at du kiggede
+
+Julie: på den først? Altså, jeg kiggede på
+
+Christoffer: det her frem for hvad? Frem for de tekst lige under. Det her? Ja. Ja. Øhm...
+
+Julie: Det blev måske sådan lidt for kortfattet. Altså f.eks. det der E-to-E-encrypted. Det er heller ikke noget, der siger mig noget, umiddelbart. Øhm... Og så E... Øh, jo, okay. E-to-E-encrypted giver mening. Men... Ja, jeg tror måske, det stod lidt mere frem i mine øjne, og det var noget, der bare gav lidt bedre mening. Måske nogle ord, jeg er mere vant
+
+Christoffer: til at bruge. Ja, det var måske også, fordi du kiggede efter en kalender
+
+Julie: specifikt, eller sådan noget. Ja, kalenderen sprang jo meget tydeligt frem, men også det der med secure sprang meget tydeligt frem. Som jo ikke stod i de der grå bukser. Fedt.
+
+Christoffer: Synes du det var nemt at sammenligne de her alternativer? Hvorfor
+
+Julie: og hvorfor ikke? Altså de her alternativer?
+
+Christoffer: Jamen hvis du gik ind på dem, f.eks. med fænsterne. Ja. Synes du så det var nemt? Når vi er her? Ja, både at finde frem til det der, men også når du bare kommer ind på det.
+
+Julie: Ja. Altså, jeg synes, at de der features, som sagt, var meget nemt at forstå. Hvad forskellen er på dem, og hvordan det egentlig også meget bare er det, jeg søger efter. Ja, jeg synes, det gav
+
+Christoffer: mening. Var der en eller anden form for information, du følte manglede, eller hvor du følte, at det kunne være rart at have?
+
+Julie: Det tror jeg ikke. Altså, alle de vigtigste ting var der jo, altså med pris og land og ja, funktionalitet match, det var også virkelig vigtigt. Så jeg tror også bare, at hvis der kommer for meget på, så bliver det også lidt uoverskueligt. Jeg kan egentlig godt lide, at det er ret kortfattet, men uden at det er for meget.
+
+Christoffer: Føles den her hjemmeside naturlig for dig? Og virkede det som om, at vi prøvede at skubbe en bestemt alternativ mod dig? Prøvede vi ligesom at manipulere dig til
+
+Julie: at finde? Ej, på ingen måde. Jeg synes overhovedet ikke, det virkede som om, at man blev skubbet i en retning. Det er jo fordi, at der var de her forskellige kategorier. Og også en søgefunktion, så man jo virkelig kan bruge sin egne ord. Så ja, jeg synes, at det fungerede godt. At man kunne finde frem til sin egen løsning. Man kunne selv lede efter de ord, som var vigtige
+
+Christoffer: for en. Jeg synes, det var rart, at man fik en beskrivelse på, hvorfor man har fået den score, man har fået fra sammenligningen.
+
+Julie: Den her? Ja. Altså, jeg ved ikke, om jeg vil læse det selv. Fordi det der med 82 ud af 100, det giver jo bare mening. Altså, der har du allerede al den information, man måske egentlig behøver. Men det er også bare mig, fordi der er nok mange, måske især mere tekniske personer, der vil dykke mere ned i UKM. Hvor er det så? Altså, man lige dykker ned i den her beskrivelse, der kommer efter den der score 82 ud af 100, ikke? Så jeg synes helt sikkert, den skal være der. For ellers så virker det jo også sådan lidt... Hvor får du det taget fra? Det kan virke mere sådan, at man prøver at skjule noget. Det kan virke netop, som om man prøver at skubbe nogle i en bestemt retning, som du var inde på før. Så jeg synes, det gør, at det står frem, fordi det viser noget transparens.
+
+Christoffer: Fedt. Nu har du også mærket, at der var en chat-funktion. Jeg tror faktisk
+
+Julie: aldrig rigtig, at jeg skubbede noget til den del. Nej,
+
+Christoffer: det har jeg også før. Det har også noget at gøre med, hvad der
+
+Julie: føles naturligt. Ja, jeg tror også, den springer måske ikke så meget i øjnene på mig. Måske også fordi farverne er lidt... Han er jo
+
+Christoffer: tom lige nu også, så det er
+
+Julie: også derfor. Og farverne er lidt væk, altså sådan væk her, eller hvad man siger. Væk. Mere væk. Men jeg tror også måske det er, fordi jeg har fået alle den information, jeg behøvede, inden jeg nåede dertil. Ja,
+
+Christoffer: fedt. Før du så den her hjemmeside her, hvor besværligt tænkte du så det ville være at skifte til et europæisk alternativ? Ret besværligt. Men det
+
+Julie: tror jeg også, fordi jeg ikke er så ærlig teknisk anvendt. Og så snart det kommer ind på noget af det, så bliver jeg bare allerede træt. Og tænker, det bliver en proces, det her. Men det er jo bare noget, jeg har tænkt inden. Fordi da jeg kom ind på studiet, så så man jo de der kategorier. Og der synes jeg, det virkede meget mere overskueligt. Fordi man ligesom... Ja, kunne lede efter nogle meget genkendelige ord, som heldigvis også blev brugt. Fedt,
+
+Christoffer: der fik du også plads for at svare på nummer 9. Og spørge om det føltes mere realistisk og manageable, altså sådan overskuddet, som du siger. Ja. Øhm... Efter du har brugt vores hjemmeside, følte du så, at du havde sådan nogenlunde en idé om, hvad skulle det næste så være, når du skulle skifte til det her aktiv? Hvad skulle det næste skridt være?
+
+Julie: Ja, var det ikke der, hvor jeg trykker på den her? Jo, men
+
+Christoffer: jeg vil gerne vide... Følte du, at du vidste, at nu er det bare det,
+
+Julie: du skal? Ja, jeg synes, det virker ret oplagt, at... Man ligesom havde fået den information, man havde brug for, fordi selvfølgelig ville man ikke bare trykke på en knap og være sådan der, nu skal jeg over til det alternativ, hvis man ikke ved, hvad det er, man går ind til. Så i og med, at jeg havde opnået den information, jeg behøvede, og jeg gerne ville vække fra et amerikansk service platform app, så er det jo lidt noget, der gør, at jeg kan opnå mit
+
+Christoffer: formål. Fedt! Tusind tak for at deltage her. Det har været rigtig hyggeligt.

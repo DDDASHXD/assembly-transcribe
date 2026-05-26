@@ -1,0 +1,111 @@
+Sebastian: Godt. Din første task er, at du skal finde et program, som du godt kunne tænke dig at finde et alternativ til.
+
+Laura: Okay. Jamen, jeg tror, jeg gerne vil finde et alternativ til Word. Så står der nogle forskellige American services. Click to see European alternatives. Okay. Der står Microsoft Word her. Så klikker jeg på den. Open source word processor with strong. Yes. See more. Der står at den er gratis. Det tænker jeg må være et alternativ fra Microsoft Word herude i siden. Library, office, writer. Okay, så kan man se, at man skal betale til Word, men den her er gratis, og den er amerikansk, og den her er tysk. Står der noget med lovgivning? Det går jeg bare ud fra, at det er de forskellige lov fra de forskellige countries. Enterprisegrad. Yes. Det ved jeg ikke helt selv, hvad det betyder. Okay. Key features. Det må være ud fra Microsoft Word. Nej, det er jo så det nye program, må det være. Og så er der Compare to Microsoft Word. Der står Track changes and comments på Library, Office, Mail, Merge, Advanced styles and templates, Export to PDF, EPUB, Extension support, Og på Compare to Microsoft Word. No real-time cloud collaboration out of the box. No AI writing suggestions. No mobile app. Så det er vel fordi Microsoft Word ikke har en mobil app. Nej, det har de da. Det har jeg på telefonen. Known issues. Some complex Word documents with special fonts of macros may not render identically. Okay, så det vil bare de ikke lære af. How to migrate. Open docs files directly, save as docs for sharing with Word users. Hvad står der her nu? Nå, der kan man bare share ens experience. Visit official site. Den klikker vi på. Okay, så kom jeg så ind på hjemmesiden til Library Office. Read the guidebook. Okay, de har en guidebook til, hvordan man bruger det. Og så en future to spreadsheet, hvordan man analyserer. Så det er ligesom Google Sheets. Okay. Mange forskellige matematik og impress, draw, base.
+
+Sebastian: Ja, jeg stopper dig her. Fordi du har faktisk klaret alle taskene selv, uden at jeg har læst dem af til dig.
+
+Laura: Nå!
+
+Sebastian: Så det er faktisk ret godt klaret. Du har gjort fuldstændig, som vi havde håbet på, at en bror ville gøre.
+
+Laura: Okay.
+
+Sebastian: På mange punter. Men der var også nogle tydelige ting, vi kunne se, der skal ændres på, for at det giver bedre mening.
+
+Laura: Okay.
+
+Christoffer: Vandskåren for eksempel.
+
+Sebastian: Ja. Den skal forklares bedre.
+
+Laura: Ja, der er så 88 procent.
+
+Sebastian: Ja. Og det var ligesom, ikke 88, det var 88. Altså, hvor tæt er de to services på hinanden?
+
+Laura: Nå, okay!
+
+Sebastian: Ja, det er det, der skal være besluttet.
+
+Laura: Okay, ja, jeg forstod det som noget andet.
+
+Sebastian: Nå, vi lige går tilbage igen en gang, og så kan vi bare lige få et clean slate og sådan der.
+
+Laura: Ja.
+
+Sebastian: Nu vil jeg spørge dig nogle spørgsmål. Hvad var din overall impression af hjemmesiden?
+
+Laura: Altså, jeg synes det er meget fedt, at de sætter de forskellige futures op, Så man kan se Microsoft Words og så Library Writers. Og så kan man se, at man betaler til Microsoft Word, men så er der faktisk et andet program, som er gratis i stedet for. Så det synes jeg er meget fedt. Jeg kan også se, at jeg er gået over StrongMatch, den grønne boks. Det kunne være, at den måske skulle stå højere op. Jeg ved det ikke. Der er et bud.
+
+Christoffer: Der er en ting, jeg lukkede mærke til. Lukkede du mærke til, at der var en option til at sætte flere funktioner?
+
+Laura: Nej.
+
+Christoffer: Fordi det giver Natasha nemlighed.
+
+Laura: Der? Fodekonfiguration? Nej, det lavede jeg ikke mærke til. Nååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååå
+
+Sebastian: Det ville være fedt at sætte den her ud til højre for det tekster.
+
+Laura: Ja, over i hjørnet, fordi man læser oppefra og ned. Så den der gik jeg lidt over det samme med. Strong matches.
+
+Sebastian: Godt. Var der på noget tidspunkt, hvor du var usikker på, hvad du skulle gøre som det næste?
+
+Laura: Altså nede ved det her, known issues, how to migrate, der var jeg lidt forvirret over, hvad det skulle bruges til. Men det kan også være, at det er mit engelske niveau, tror jeg sådan lidt. Og så hernede med community experience, der vil jeg måske tro, at når man så klikker ind på official siten, så skulle jeg være der, men det har jeg måske ikke noget med at gøre. Ellers så synes jeg egentlig, at det var meget lige til i forhold til, at hvis et official site, den kunne måske godt være højere eller større. Fordi jeg tænker på en træt dag, så var det måske ikke det, man var klippet ind på. Jeg lagde først mærke til Community Experience, før jeg kiggede på Visit Official Site. Så jeg gik først ned til det, fordi det så bredere ud, og der var mere tekst. Så tænkte jeg, at det var måske der, jeg skulle hen. Og så så jeg den der Visit Official Site efterfølgende.
+
+Sebastian: Det var du lidt svaret på, men var det nemt for dig at sammenligne de to alternativer? Eller alternativet med den amerikanske service?
+
+Laura: Ja, det synes jeg. Jeg synes det er full feature comparison. Altså den knap man klikker på. Den giver dog en lidt bedre blik af hvordan de kan sammenlignes. Men det er jo også fordi der er grøn check og så er der minuser. Der kommer lidt mere farve på.
+
+Sebastian: Yes. Da du, hvad hedder det? Sammenlignet servicesne, var der så noget information, du tænkte, du gik efter at finde? Var det noget, du tænkte, nu vidste du, du skulle finde et alternative to work, eller noget, du tænkte, det her det skal, det her også kunne, eller det her det skal kunne være?
+
+Laura: Jeg føler, at alle de... Den måde, du bruger work på, den skulle være meget lige med... Altså de ene... Hvad hedder det? Egenskaber som Word har, skal pretty much også gå lige med den anden.
+
+Christoffer: Det ville evt. have hjulpet, hvis vi havde tilføjet et billede af hver platform, så man så
+
+Sebastian: interfacet på den ene og interfacet på den anden.
+
+Laura: Ja, det tror jeg. Lidt mod start-tiden af et Word-dokument. Også se hvad man kunne klikke ind på, om det var nogenlunde lige med. I Library Rider eller... Så man ligesom fik et billede af, hvordan det så ud, når man så også var inde på selve appen.
+
+Sebastian: Ja.
+
+Laura: Eller hjemmesiden.
+
+Sebastian: Yes. Var der noget information, du følte, du manglede?
+
+Laura: Øh... Egentlig... Ikke, tror jeg. Ikke umiddelbart.
+
+Sebastian: Nej.
+
+Laura: Ikke umiddelbart.
+
+Sebastian: Okay. Føles hele søgeoplevelsen neutral for dig, eller følte du at vi prøvede på at skubbe et eller andet form for agenda? Eller skubbe nogle specifikke services?
+
+Laura: Jeg følte ikke I prøvede at skubbe noget. Men jeg ved ikke om den måske kunne sættes op lidt mere. Men klik links eller et eller andet med. Her kan du se det her. Her kan du se en comparative. Her kan du se billeder af, hvordan de ser ud. Sammenligningerne. Så det hele ikke lå på én side, måske. Hvis det giver mening.
+
+Sebastian: Ja. Det giver mening. Okay. Før du så den her hjemmeside, hvor... Hvordan forestillede du dig, at det ville være svært at skifte fra et europæisk alternativ?
+
+Laura: Nok lidt, ja, fordi det er det, man er vant til at arbejde med. Så jeg tror også, at bekymringen ved, om man ville kunne finde ud af det, om det ville være nogenlunde det samme, det sad nok lidt inde i hovedet. Om der ville være noget bedre alternativ. Om man kunne finde det.
+
+Sebastian: Og det er selvfølgelig også, at man skal huske at sætte sig ind i konteksten af, at det her liv handler om, Man vil bare skifte for at skifte. Det er jo fordi, at man gerne vil skifte, fordi at Amerika, og man har ikke lyst til at bruge amerikanske services.
+
+Laura: Og man kan sige, hvis man også kan få noget, der er gratis i stedet for, så vil man da hellere måske skifte til det.
+
+Sebastian: Gjorde hjemmesiden, at du følte, at det var mere realistisk at skifte? Altså mere overskueligt at skifte? Gjorde det mere overskueligt for dig at tænke, okay nu skal jeg over til
+
+Laura: Det gjorde det i hvert fald mere overskueligt, at der var den her hjemmeside, hvor man kunne søge efter det, så man ikke selv skulle sidde og lave masse Google-søgninger. Så det er lidt ligesom AI samler det hele og giver dig en måde at finde alternativer på, end at man skal lave en Google-søgning og så skal I klikke ind på flere links.
+
+Sebastian: Efter du brugt hjemmesiden, hvad hedder det, følte du så at du vidste hvad du skulle gøre som det næste, hvis du gerne ville prøve det her alternativ?
+
+Laura: Ja, jeg synes der stod her, her kunne du downloade det her, og her kunne du downloade det her. Og der var en guide til hvordan.
+
+Sebastian: Og det var nemt nok at komme til?
+
+Laura: Ja, det synes jeg.
+
+Sebastian: Ja, der var lige det der med,
+
+Laura: at jeg ville have den der større, hvis det var. Visit official site eller et eller andet. Men ja, det synes jeg den viste, hvordan man kom hen til det.
+
+Sebastian: Ja. Fedt. Tak.
+
+Laura: Velbekomme.

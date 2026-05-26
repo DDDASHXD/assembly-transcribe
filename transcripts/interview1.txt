@@ -1,0 +1,111 @@
+Sebastian: Godt. Hej og tak fordi du vil være med i vores brugertest.
+
+Natasja: Selvfølgelig.
+
+Sebastian: I det her projekt skal vi udvikle en prototyp fra en hjemmeside, der hjælper brugere med at udforske europæiske alternativer til velkendte digitale platformer, programmer og online services. Meningen med hjemmesiden er at gøre det nemmere for brugere at udforske de her alternativer og også sammenligne alternativerne med hinanden og også med de amerikanske counterparts. Igennem testen skal du navigere igennem en prototype og interagere med den så naturligt som muligt. Og der er ikke nogen rigtige eller forkerte svar og vi tester Og vi tester ikke dig som bruger, i stedet så tester vi designet og strukturen og den experience man får når man bruger hjemmesiden.
+
+Natasja: Hvad?
+
+Sebastian: Så imens du bruger rotatypen skal du tænke så højt som muligt. Det vil sige at du skal se hvad du kigger på og hvad du regner med sker når du trykker på en ting. Og fortæl os hvad der føles klart eller hvad der er confusing.
+
+Natasja: Forvirrende.
+
+Sebastian: Forvirrende, ja. Og også hvad du tænker på, mens du navigerer igennem interfacet. Det her kan hjælpe os med at bedre forstå, hvordan... Det skal vi ikke sige. Det kan vi skære fra. Prototypen er ikke helt funktionel over det hele, fordi det stadig er en meget tidlig udviklingsproces, og hvis noget føles uklart eller ikke færdiggjort, er det helt fint, og så er det virkelig brugbart for os at observere den confusingness. Efter testen bliver vi spurgt om nogle få spørgsmål omkring hele oplevelsen. Hvad fungerede godt og hvis det er noget du kunne forestille dig selv at bruge i fremtiden. Men først vil du få en liste af tasks, du skal igennem i prototypen, og vi vil gerne tage at starte med at finde et alternativ. Du skal tænke på et eller andet program, app eller online service, som du bruger i dag, og se om du kan finde et europæisk alternativ til det ved hjælp af prototypen. Imens du gør det her, så skal du som sagt forklare din proces højt, og prøve at beskrive hvad det er, du leder efter, og hvad der føles uklart, osv. Det næste task er, at du skal sammenligne dit program med et alternativ. Og den sidste er, at du skal forestille dig, at du er interesseret i at prøve en af de alternativ, du har fundet. Og så skal du udforske, hvad det næste step er derfra. Øhm, så ja. Vær så god.
+
+Natasja: Okay, så skal vi blive her?
+
+Sebastian: Så skal vi starte med at finde et alternativ, ja.
+
+Natasja: Starte med at finde et alternativ.
+
+Sebastian: Præcis.
+
+Natasja: Okay. Så tænker jeg, at jeg prøver på at search by service name. Så siger vi Pinservice. Der er ikke noget.
+
+Sebastian: Spændende.
+
+Natasja: Hvordan? Vi prøver en anden. Her prøver jeg en mere.
+
+Sebastian: Det er lige før, at det havde været nemmere at sige, at de skal søge på en specifik en, fordi det er sådan lidt svært. Prøver at søge efter den her Microsoft-pakke.
+
+Natasja: Nu skal jeg afbløbe. Okay, så er der American Service, og så European Alternative. Ah, okay. Det giver mening. Er det sådan nedunder? Og så kommer alternativer på den måde. Nede. De 90'er og de 88'ers nåde, det er procentvis, ikke? Nej. Nej. Okay, vi prøver det her fantomæle nåde. Hvor ligner det så? Og så samler jeg den lidt her. Når de er gode, og hvor meget de matcher. Ah, det gav bedre mening. Og så er der både gode og dårlige ting ved det. Tryk for fri. Nu prøver jeg på at prøve at se min side. Smart. Okay, jeg skal ud så.
+
+Sebastian: Så er der næste step. Ja, det har du næsten gjort jo. Du har, hvad hedder det, sammenlignet de to alternativer. Har du ikke det?
+
+Natasja: Jo.
+
+Sebastian: Så er det næste step. Du skal forestille dig, at du er interesseret i at prøve et af de her alternativer, som du har fundet. Og så skal du udforske, hvad den næste step kunne være for dig som bruger. For eksempel så kunne det være at læse mere information, tjekke, hvordan migreringen foregår fra det ene til det andet. Og besøge den nye alternativs hjemmeside. Eller hvad brugere har kommenteret.
+
+Natasja: Jeg kan godt lide, at der står lidt omkring hver alternativ. Det er egentlig meget fedt. Jo. How to migrate. Og så er der også en lille en, der forklarer, Overfører den en til den anden?
+
+Sebastian: Hmm?
+
+Natasja: Hmm? Det kan jeg godt forstå. Community experience. Nå, prøv at se.
+
+Sebastian: Husk at tænke højt.
+
+Natasja: Jeg har slet ikke læst. Hvad hedder det forklaring på community experience? Der er jo ikke nogen, der har experience i det.
+
+Sebastian: Der er ikke nogen, nej der er ikke nogen. Du kan også lave nogle falske ord. Ja, det er ligefølgelig. Er du klar til nogle spørgsmål?
+
+Natasja: Ja.
+
+Sebastian: Hvad var din overordnede følelse af hjemmesiden?
+
+Natasja: Den var pæn. Man kan også godt lide det her Browse by Categories, så man kan finde nogle kategorier forvejen. Det fungerede meget godt, også fordi det føles lidt Google-agtigt, så det er meget nemt at finde ud af, hvor man skal søge hende. Og så det med at komme op med forestat, når man begynder at oversøge. Det fungerede også sindssygt godt. Det er lidt sjovt, når den amerikanske står for øverst, og så bagefter kommer den europæiske. Altså sådan helt til at starte, når man begynder at søge. Og så når man så klikker ind på noget, så kan man så se, at det amerikanske og det europæiske er lidt anderledes. Så det bliver jo måske en lille smule forvirrende. Men ikke problematisk. Så ja, der er en anden.
+
+Sebastian: Yes. Var der noget tidspunkt, hvor du følte dig usikker på, hvad du skulle gøre som det næste?
+
+Natasja: Nej, faktisk ikke rigtigt. Det er primært, når vi kommer ned til de der known issues, how to migrate, og why we included this. Det er pludselig lidt for forvirrende, men det giver kun en, det er der. Så det vil jeg ikke fjerne, måske sætte det på en lidt anden måde.
+
+Sebastian: Synes du, det var nemt at sammenligne de alternativer, der er? Ja, meget. Hvorfor?
+
+Natasja: Primært fordi, når man så har klikket ind på de to forskellige, så kan man se både for og imod at skulle vælge det ene eller andet fra. Og der er også andre alternativer, så det er meget nemt at klikke rundt mellem alternativerne for at se, hvem der passer bedst.
+
+Sebastian: Da du sammenlignede de to services, hvad var den information, du kiggede efter? Hvis der var noget specifik information, du kiggede efter?
+
+Natasja: Jeg tror ikke, jeg kiggede efter noget af den helt specifikke information. Jeg læste faktisk en del omkring de små bukser, der er dernede. Altså der er bare alternativet, og så var der en lille forklaring på, hvad det var for noget. Og hvorfor man kunne skifte derover. Det synes jeg var meget fedt, det også var det. Og så der er sådan nogle keywords, at man ligesom kan vælge.
+
+Sebastian: Ja. Var der, hvad hedder det, noget information, du synes manglede? Du har svaret på det faktisk. Det kan jeg ikke helt huske.
+
+Natasja: Nej, jeg har ikke helt svaret på det. Okay. Men jeg tror også, at jeg sådan ikke helt ved, hvad der er sku manglet.
+
+Sebastian: Nej, okay.
+
+Natasja: Øhm... Nå.
+
+Sebastian: Okay.
+
+Natasja: Der er ikke noget manglet.
+
+Sebastian: Yes. Føles, hvad hedder det, hjemmesiden sådan neutral? Altså, eller følger vi, man kan sige, hvad kan man sige det? Prøver at vælge? Ja, promoverer noget. Skubbe en specifik service eller noget som helst?
+
+Natasja: Nej. Altså, man kan jo godt mærke på siden, at den prøver at promovere nogle europæiske alternativer.
+
+Sebastian: Ja.
+
+Natasja: Men det er jo også det, den skal gøre, ikke? Og så på alt det, vi har klippet ind på, var der mange flere for, end der var imod. Men det gav også god mening i forhold til, at det er nogle matcher, man kigger på og skulle vælge noget andet.
+
+Sebastian: Det var mere i forhold til, om i mellem de alternativer, der er, føler du, at der er nogle af dem, der bliver skubbet mere imod dig, end de andre? At vi prøver at tvinge en bestemt alternativ?
+
+Natasja: Nej, det synes jeg ikke.
+
+Sebastian: Fedt. Godt. Før at du så den her hjemmeside, har du så tænkt over, hvor svært det vil være at skifte til en europæisk alternativ i stedet for, for eksempel du skulle skifte fra Microsoft Outlook til Proton Mail?
+
+Natasja: Nej, jeg tror aldrig, at jeg har tænkt over det andet end, at vi på mit arbejde har talt omkring at skulle skifte. Men vi har ikke kigget egentlig, hvor svært eller nemt det eventuelt kunne være. Bare at det måske kunne være bedre.
+
+Sebastian: Og gjorde hjemmesiden, det med at skifte til en anden service, gør den, at det føles mere realistisk? Eller mere, jeg kan ikke huske det danske ord for det, men manageable? Altså mere håndterbart? Overskueligt?
+
+Natasja: Ja, det gør det. Det har været meget mere overskueligt, også at man ikke skal ud og finde masser af alternativ, der er blevet fundet for en. Og så er det bare med at finde et løb, som passer bedst til det, man bruger det til i forvejen.
+
+Sebastian: Efter du brugte hjemmesiden, følte du så, at du vidste, hvad du skulle gøre den næste for at komme i gang med det her alternativ, altså at skifte? Følte du dig klippet på?
+
+Natasja: Ja, lidt. Jeg tror igen, at man skal læse meget mere omkring virksomhederne og hvad de gør.
+
+Sebastian: Og nu finder jeg bare lige på mit eget spørgsmål her, lige hurtigt, som jeg har så skrevet ned. Hvis nu at der var sådan en knap, hvor der stod, skal vi hjælpe dig med at skifte? Hvis du lige f.eks. der egentlig mindsetter af, at du er din chef, og tænker, vi skal altså skifte over til noget europæisk i stedet for det der Microsoft. Vil du så som chef tænke, åh det kunne da være fedt, hvis der alligevel var sådan nogle gutter, der kunne komme og hjælpe os med
+
+Natasja: det? Helt klart. Det med at selv skulle skifte, kan hurtigt blive uafskueligt. Altså igen, det der med både at finde, men også med at skifte reelt, det er jo et meget stort step. Så hvis der var nogen, der ligesom var eksperterne inden for det her område, så ville det da helt klart være en stor hjælp, fordi i hvert fald kunne guide en igennem det meget mere specifikt, end bare at finde. Ja.
+
+Sebastian: Fedt. Thank you for your time.
+
+Natasja: Det var i hvert fald lidt.
