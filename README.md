@@ -1,22 +1,50 @@
-# Assembly Transcribe
+# @skxv/transcribe
 
-A small OpenTUI CLI for transcribing local audio files with AssemblyAI.
+A terminal UI for transcribing local audio files with AssemblyAI.
 
-## Run
+## Install and run
+
+```sh
+npx @skxv/transcribe
+```
+
+For local development:
 
 ```sh
 bun install
 bun run dev
 ```
 
-The AssemblyAI key is loaded from `.env.local`. Keep that file out of git.
+## First run
+
+On first launch, the app prompts for your AssemblyAI API key in the terminal. The key is saved to your user config directory (`~/.config/@skxv/transcribe/config.json` on macOS/Linux). The app does not read `.env` files or environment variables for the API key.
 
 ## Use
 
 Start the TUI, drag one or more audio files into the terminal input, then press Enter. Most terminals paste dragged files as paths, which the app validates and sends to AssemblyAI.
 
-Completed transcripts are written to `transcripts/<audio-file-name>.txt`, and the latest transcript is shown in the TUI.
+Completed transcripts are saved to `~/Documents/Transcriptions/<audio-file-name>.txt`. Select a past transcript in the History panel (or press `H` to focus it, then Enter) to open it again.
 
-## Transcription Mode
+## Keyboard shortcuts
 
-Dropped files are transcribed with AssemblyAI's pre-recorded audio API using `universal-3-pro` with `universal-2` fallback. AssemblyAI's real-time/streaming models are designed for live PCM audio streams, not already-recorded files dropped into a terminal.
+| Key | Action |
+| --- | --- |
+| Tab | Next settings control |
+| H | Focus history |
+| Enter (history focused) | Open selected transcript |
+| O / Ctrl+O | Reveal transcript in Finder / Explorer |
+| N / P | Next / previous utterance |
+| E | Edit utterance line |
+| R | Rename speaker |
+| Space / X | Play/pause / stop audio (macOS) |
+
+## Transcription mode
+
+Dropped files are transcribed with AssemblyAI's pre-recorded audio API using `universal-3-pro` with `universal-2` fallback.
+
+## Publish
+
+```sh
+npm run build
+npm publish --access public
+```

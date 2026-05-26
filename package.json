@@ -1,17 +1,43 @@
 {
-  "name": "assembly-transcribe",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@skxv/transcribe",
+  "version": "0.2.0",
+  "description": "Terminal UI for transcribing local audio files with AssemblyAI",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skxv/assembly-transcribe"
+  },
+  "keywords": [
+    "assemblyai",
+    "transcription",
+    "tui",
+    "cli",
+    "audio"
+  ],
+  "bin": {
+    "transcribe": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "start": "bun run src/index.ts",
-    "dev": "bun run src/index.ts"
+    "dev": "bun run src/cli.ts",
+    "start": "bun run src/cli.ts",
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@opentui/core": "latest",
     "assemblyai": "latest"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^25.9.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
   }
 }
