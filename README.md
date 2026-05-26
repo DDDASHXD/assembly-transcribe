@@ -29,17 +29,17 @@ Completed transcripts are saved to `~/Documents/Transcriptions/<audio-file-name>
 
 ## Keyboard shortcuts
 
-| Key | Action |
-| --- | --- |
-| Tab | Next settings control |
-| H | Focus history |
-| Enter (history focused) | Open selected transcript |
-| Ctrl+O | Reveal transcript or audio file in Finder / Explorer |
-| N / P | Next / previous utterance |
-| E | Edit utterance line |
-| R | Rename speaker |
-| Space / X | Play/pause / stop audio |
-| [ / ] | Seek backward / forward 10 seconds |
+| Key                     | Action                                               |
+| ----------------------- | ---------------------------------------------------- |
+| Tab                     | Next settings control                                |
+| H                       | Focus history                                        |
+| Enter (history focused) | Open selected transcript                             |
+| Ctrl+O                  | Reveal transcript or audio file in Finder / Explorer |
+| N / P                   | Next / previous utterance                            |
+| E                       | Edit utterance line                                  |
+| R                       | Rename speaker                                       |
+| Space / X               | Play/pause / stop audio                              |
+| [ / ]                   | Seek backward / forward 10 seconds                   |
 
 ## Transcription mode
 

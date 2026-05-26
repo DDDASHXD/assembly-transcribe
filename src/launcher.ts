@@ -22,7 +22,8 @@ if (finish(bunResult)) {
 
 const major = Number(process.versions.node.split(".")[0] ?? 0)
 if (major >= 26) {
-  const nodeResult = run(process.execPath, ["--experimental-ffi", "--allow-ffi", cliPath, ...forwardedArgs])
+  // Only --experimental-ffi is required. --allow-ffi implies --permission and breaks CLI startup.
+  const nodeResult = run(process.execPath, ["--experimental-ffi", cliPath, ...forwardedArgs])
   if (finish(nodeResult)) {
     // process exited in finish()
   }
