@@ -34,11 +34,12 @@ Completed transcripts are saved to `~/Documents/Transcriptions/<audio-file-name>
 | Tab | Next settings control |
 | H | Focus history |
 | Enter (history focused) | Open selected transcript |
-| O / Ctrl+O | Reveal transcript in Finder / Explorer |
+| Ctrl+O | Reveal transcript or audio file in Finder / Explorer |
 | N / P | Next / previous utterance |
 | E | Edit utterance line |
 | R | Rename speaker |
-| Space / X | Play/pause / stop audio (macOS) |
+| Space / X | Play/pause / stop audio |
+| [ / ] | Seek backward / forward 10 seconds |
 
 ## Transcription mode
 

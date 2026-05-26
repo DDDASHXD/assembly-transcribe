@@ -1,7 +1,8 @@
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises"
-import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process"
+import type { ChildProcess } from "node:child_process"
 import path from "node:path"
 import { AssemblyAI } from "assemblyai"
+import { canSeek, getAudioBackend, spawnPlayback } from "./audio-player.js"
 import {
   BoxRenderable,
   InputRenderable,
@@ -33,6 +34,10 @@ const audioExtensions = new Set([
   ".wma",
 ])
 
+const SPINNER_FRAMES = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+const LOADING_BAR_WIDTH = 28
+const SEEK_STEP_MS = 10_000
+
 export async function main() {
   const renderer = await createCliRenderer({
     exitOnCtrlC: true,
@@ -63,11 +68,15 @@ export async function main() {
   const speakerColorPalette = ["#8EA2FF", "#72D49F", "#FFD166", "#FF8FA3", "#C792EA", "#7FDBFF", "#F78C6C", "#A3E635"]
   let modalMode: "speaker" | undefined
   let modalUtteranceIndex = 0
-  let playerProcess: ChildProcessWithoutNullStreams | undefined
+  const audioBackend = getAudioBackend()
+  let playerProcess: ChildProcess | undefined
   let playbackStartedAt = 0
   let playbackPositionMs = 0
+  let playbackPaused = false
   let playbackTimer: ReturnType<typeof setInterval> | undefined
   let playbackActiveIndex = -1
+  let loadingTimer: ReturnType<typeof setInterval> | undefined
+  let loadingTick = 0
   const settings = {
     speechModels: ["universal-3-pro", "universal-2"],
     languageDetection: true,
@@ -77,6 +86,7 @@ export async function main() {
 
   process.once("exit", () => {
     if (playerProcess) playerProcess.kill()
+    stopLoadingAnimation()
   })
 
   const app = new BoxRenderable(renderer, {
@@ -141,7 +151,7 @@ export async function main() {
 
   const help = new TextRenderable(renderer, {
     id: "help",
-    content: "Tab: next  H: history  O: reveal file",
+    content: "Tab: next  H: history  Ctrl+O: reveal file",
     fg: "#AAB6C5",
   })
 
@@ -299,7 +309,7 @@ export async function main() {
 
   const playerHelp = new TextRenderable(renderer, {
     id: "player-help",
-    content: "Space: play/pause  X: stop  O: reveal transcript",
+    content: "Space: play/pause  X: stop  [/]: seek 10s  Ctrl+O: reveal",
     fg: "#AAB6C5",
     visible: false,
   })
@@ -309,6 +319,37 @@ export async function main() {
     content: "Ready.",
     fg: "#8EA2FF",
   })
+
+  const loadingPanel = new BoxRenderable(renderer, {
+    id: "loading-panel",
+    width: "100%",
+    flexDirection: "column",
+    gap: 0,
+    visible: false,
+  })
+
+  const loadingSpinner = new TextRenderable(renderer, {
+    id: "loading-spinner",
+    content: "",
+    fg: "#8EA2FF",
+    attributes: 1,
+  })
+
+  const loadingBar = new TextRenderable(renderer, {
+    id: "loading-bar",
+    content: "",
+    fg: "#72D49F",
+  })
+
+  const loadingHint = new TextRenderable(renderer, {
+    id: "loading-hint",
+    content: "Uploading audio and generating transcript...",
+    fg: "#AAB6C5",
+  })
+
+  loadingPanel.add(loadingSpinner)
+  loadingPanel.add(loadingBar)
+  loadingPanel.add(loadingHint)
 
   const transcriptTitle = new TextRenderable(renderer, {
     id: "transcript-title",
@@ -326,7 +367,7 @@ export async function main() {
 
   const transcriptControls = new TextRenderable(renderer, {
     id: "transcript-controls",
-    content: "N/P: move  E: edit line  R: rename speaker  O: reveal file",
+    content: "N/P: move  E: edit line  R: rename speaker  Ctrl+O: reveal file",
     fg: "#AAB6C5",
   })
 
@@ -392,6 +433,7 @@ export async function main() {
   settingsPanel.add(playerStatus)
   settingsPanel.add(playerHelp)
   mainPanel.add(status)
+  mainPanel.add(loadingPanel)
   mainPanel.add(transcriptTitle)
   mainPanel.add(emptyState)
   mainPanel.add(transcriptControls)
@@ -454,6 +496,8 @@ export async function main() {
 
   const focusables = [input, modelSelect, languageSelect, diarizationSelect, speakerCountSelect, historySelect]
   let focusedControlIndex = 0
+  let lastInputLength = 0
+  let queueingPaths = false
   const focusLabels = [fileLabel, modelLabel, languageLabel, speakerTitle, speakerCountLabel, historyLabel]
   const settingsControls = [
     settingsTitle,
@@ -483,6 +527,11 @@ export async function main() {
     })
   }
 
+  function isTextInputFocused() {
+    if (modal.visible) return true
+    return focusedControlIndex === 0
+  }
+
   renderSettingsFocus()
   renderHistorySelect()
 
@@ -499,7 +548,7 @@ export async function main() {
       return
     }
 
-    if (!modal.visible && activeJob?.utterances?.length) {
+    if (!modal.visible && activeJob?.filePath && !isTextInputFocused()) {
       if (key.name === "space") {
         togglePlayback()
         return
@@ -508,6 +557,17 @@ export async function main() {
         stopPlayback()
         return
       }
+      if (key.name === "[") {
+        seekBy(-SEEK_STEP_MS)
+        return
+      }
+      if (key.name === "]") {
+        seekBy(SEEK_STEP_MS)
+        return
+      }
+    }
+
+    if (!modal.visible && activeJob?.utterances?.length && !isTextInputFocused()) {
       if (key.name === "n") {
         selectedUtteranceIndex = Math.min(selectedUtteranceIndex + 1, activeJob.utterances.length - 1)
         renderActiveTranscript()
@@ -528,12 +588,12 @@ export async function main() {
       }
     }
 
-    if (key.name === "o" || (key.ctrl && key.name === "o")) {
+    if (key.ctrl && key.name === "o") {
       void revealActiveTranscript()
       return
     }
 
-    if (key.name === "h") {
+    if (key.name === "h" && !isTextInputFocused()) {
       focusSettingsControl(focusables.indexOf(historySelect))
       setStatus("History focused. Enter to open a transcript.")
       return
@@ -578,9 +638,8 @@ export async function main() {
     if (option.value) void openHistoryJob(option.value)
   })
 
-  input.on(InputRenderableEvents.ENTER, async (value: string) => {
+  async function queueDroppedPaths(value: string) {
     const paths = parseDroppedPaths(value)
-    input.value = ""
 
     if (paths.length === 0) {
       setStatus("Paste or drop at least one audio file path.", "warn")
@@ -610,6 +669,35 @@ export async function main() {
     for (const filePath of accepted) {
       void transcribeFile(filePath)
     }
+  }
+
+  input.on(InputRenderableEvents.ENTER, async (value: string) => {
+    input.value = ""
+    await queueDroppedPaths(value)
+  })
+
+  input.on(InputRenderableEvents.CHANGE, async () => {
+    if (queueingPaths) return
+
+    const value = input.value
+    const pasted = value.length - lastInputLength >= 8
+    lastInputLength = value.length
+
+    if (!pasted) return
+
+    const paths = parseDroppedPaths(value)
+    if (paths.length === 0) return
+
+    const resolved = paths.map((p) => path.resolve(p))
+    const allValid = (await Promise.all(resolved.map((p) => validateAudioFile(p)))).every((v) => v === null)
+    if (!allValid) return
+
+    queueingPaths = true
+    input.value = ""
+    lastInputLength = 0
+    setStatus(`Starting ${resolved.length} transcription${resolved.length === 1 ? "" : "s"}...`)
+    await queueDroppedPaths(value)
+    queueingPaths = false
   })
 
   modalInput.on(InputRenderableEvents.ENTER, async (value: string) => {
@@ -638,6 +726,62 @@ export async function main() {
     status.fg = tone === "ok" ? "#72D49F" : tone === "warn" ? "#FFD166" : "#FF7B7B"
   }
 
+  function getTranscribingJobs() {
+    return jobs.filter((job) => job.status === "transcribing")
+  }
+
+  function renderLoadingBar(tick: number) {
+    const chars = Array.from({ length: LOADING_BAR_WIDTH }, () => "─")
+    const windowSize = 8
+    for (let i = 0; i < windowSize; i++) {
+      const index = (tick + i) % LOADING_BAR_WIDTH
+      chars[index] = "━"
+    }
+    return `[${chars.join("")}]`
+  }
+
+  function syncLoadingUi() {
+    const transcribing = getTranscribingJobs()
+    const isLoading = transcribing.length > 0
+
+    loadingPanel.visible = isLoading
+    emptyState.visible = !isLoading && !activeJob?.text && !activeJob?.utterances?.length
+    transcriptTitle.visible = !isLoading
+    transcriptControls.visible = !isLoading
+    transcriptList.visible = !isLoading
+
+    if (!isLoading) return
+
+    const frame = SPINNER_FRAMES[loadingTick % SPINNER_FRAMES.length]
+    const names = transcribing.map((job) => path.basename(job.filePath)).join(", ")
+    loadingSpinner.content = `${frame} Transcribing ${names}`
+    loadingBar.content = renderLoadingBar(loadingTick)
+    setStatus(`${frame} Transcribing ${names}...`, "ok")
+  }
+
+  function startLoadingAnimation() {
+    if (loadingTimer) return
+    loadingTick = 0
+    syncLoadingUi()
+    loadingTimer = setInterval(() => {
+      loadingTick += 1
+      syncLoadingUi()
+      if (getTranscribingJobs().length === 0) stopLoadingAnimation()
+    }, 90)
+  }
+
+  function stopLoadingAnimation() {
+    if (loadingTimer) {
+      clearInterval(loadingTimer)
+      loadingTimer = undefined
+    }
+    loadingPanel.visible = false
+    transcriptTitle.visible = true
+    transcriptControls.visible = true
+    transcriptList.visible = true
+    emptyState.visible = !activeJob?.text && !activeJob?.utterances?.length
+  }
+
   function renderHistorySelect() {
     const openable = jobs.filter((job) => job.status === "done" && job.outputPath)
     historyTitle.content = `History (${jobs.length})`
@@ -656,6 +800,8 @@ export async function main() {
     if (!job) return
     Object.assign(job, patch)
     renderHistorySelect()
+    if (patch.status === "transcribing") startLoadingAnimation()
+    if (patch.status === "done" || patch.status === "error") syncLoadingUi()
   }
 
   async function finalizeJob(job: Job) {
@@ -690,13 +836,23 @@ export async function main() {
   }
 
   async function revealActiveTranscript() {
-    if (!activeJob?.outputPath) {
-      setStatus("No transcript file to reveal yet.", "warn")
+    const revealPath =
+      activeJob?.outputPath ??
+      activeJob?.filePath ??
+      (() => {
+        const paths = parseDroppedPaths(input.value)
+        return paths.length === 1 ? path.resolve(paths[0]) : undefined
+      })()
+
+    if (!revealPath) {
+      setStatus("Drop a file and press Enter, or wait for transcription to finish.", "warn")
       return
     }
+
     try {
-      await revealInFileManager(activeJob.outputPath)
-      setStatus(`Revealed ${formatDisplayPath(activeJob.outputPath)}.`)
+      await revealInFileManager(revealPath)
+      const label = revealPath === activeJob?.outputPath ? "transcript" : "file"
+      setStatus(`Revealed ${label} at ${formatDisplayPath(revealPath)}.`)
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Could not open file manager.", "error")
     }
@@ -707,7 +863,7 @@ export async function main() {
       status: "transcribing",
       message: "Uploading and transcribing with Universal-3 Pro",
     })
-    setStatus(`Transcribing ${path.basename(filePath)}...`)
+    startLoadingAnimation()
 
     try {
       const result = await client.transcripts.transcribe(
@@ -741,6 +897,7 @@ export async function main() {
       })
       const doneJob = jobs.find((item) => item.filePath === filePath && item.status === "done")
       if (doneJob) await finalizeJob(doneJob)
+      stopLoadingAnimation()
       renderActiveTranscript()
       showPlayer()
       setStatus(`Completed ${path.basename(filePath)}. Saved to ${formatDisplayPath(outputPath)}.`)
@@ -751,6 +908,7 @@ export async function main() {
       })
       const errorJob = jobs.find((item) => item.filePath === filePath && item.status === "error")
       if (errorJob) await finalizeJob(errorJob)
+      stopLoadingAnimation()
       setStatus(`Failed ${path.basename(filePath)}.`, "error")
     }
   }
@@ -816,32 +974,94 @@ export async function main() {
     const duration = getAudioDurationMs()
     const position = formatDuration(playbackPositionMs)
     const total = duration ? formatDuration(duration) : "--:--"
-    playerStatus.content = `${playerProcess ? "Playing" : "Stopped"}  ${position} / ${total}`
+    const state = playerProcess ? "Playing" : playbackPaused ? "Paused" : "Stopped"
+    playerStatus.content = `${state}  ${position} / ${total}`
   }
 
   function togglePlayback() {
     if (!activeJob) return
     if (playerProcess) {
-      stopPlayback()
+      pausePlayback()
       return
     }
-    startPlayback()
+    if (playbackPaused) {
+      resumePlayback()
+      return
+    }
+    startPlayback(0)
   }
 
-  function startPlayback() {
-    if (!activeJob) return
-    stopPlayback(false)
+  function pausePlayback() {
+    if (!playerProcess) return
+    playbackPositionMs = Date.now() - playbackStartedAt
+    playbackPaused = true
+    playerProcess.kill()
+    playerProcess = undefined
+    clearPlaybackTimer()
+    updatePlayerStatus()
+  }
 
-    if (process.platform !== "darwin") {
-      setStatus("Audio playback is only supported on macOS for now.", "warn")
+  function resumePlayback() {
+    startPlayback(playbackPositionMs)
+  }
+
+  function seekBy(deltaMs: number) {
+    if (!activeJob) return
+
+    const duration = getAudioDurationMs()
+    const maxPosition = duration > 0 ? duration : playbackPositionMs + Math.abs(deltaMs)
+    playbackPositionMs = Math.max(0, Math.min(maxPosition, playbackPositionMs + deltaMs))
+
+    if (playerProcess || playbackPaused) {
+      if (!canSeek(audioBackend) && playbackPositionMs > 0) {
+        setStatus("Install ffmpeg (ffplay) for seek and resume.", "warn")
+        return
+      }
+      startPlayback(playbackPositionMs)
       return
     }
 
-    playbackPositionMs = 0
-    playbackStartedAt = Date.now()
-    playerProcess = spawn("afplay", [activeJob.filePath])
-    playerProcess.once("exit", () => {
+    playbackActiveIndex = getUtteranceIndexAt(playbackPositionMs)
+    if (playbackActiveIndex >= 0) selectedUtteranceIndex = playbackActiveIndex
+    updatePlayerStatus()
+    renderActiveTranscript()
+    setStatus(`${deltaMs < 0 ? "Back" : "Forward"} 10s to ${formatDuration(playbackPositionMs)}.`)
+  }
+
+  function startPlayback(fromMs: number) {
+    if (!activeJob) return
+
+    if (audioBackend === "none") {
+      setStatus("Audio playback requires ffplay (ffmpeg) or macOS afplay.", "warn")
+      return
+    }
+
+    if (fromMs > 0 && !canSeek(audioBackend)) {
+      setStatus("Install ffmpeg (ffplay) to resume or seek within a track.", "warn")
+      return
+    }
+
+    if (playerProcess) {
+      playerProcess.kill()
       playerProcess = undefined
+    }
+    clearPlaybackTimer()
+
+    const process = spawnPlayback(activeJob.filePath, fromMs, audioBackend)
+    if (!process) {
+      setStatus("Install ffmpeg (ffplay) to resume or seek within a track.", "warn")
+      return
+    }
+
+    playbackPositionMs = fromMs
+    playbackStartedAt = Date.now() - fromMs
+    playbackPaused = false
+    playerProcess = process
+
+    playerProcess.once("exit", () => {
+      if (playerProcess !== process) return
+      playerProcess = undefined
+      playbackPaused = false
       playbackPositionMs = 0
       playbackActiveIndex = -1
       clearPlaybackTimer()
@@ -868,6 +1088,7 @@ export async function main() {
       playerProcess = undefined
     }
     clearPlaybackTimer()
+    playbackPaused = false
     if (reset) {
       playbackPositionMs = 0
       playbackActiveIndex = -1
