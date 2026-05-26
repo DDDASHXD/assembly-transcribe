@@ -8,6 +8,8 @@ A terminal UI for transcribing local audio files with AssemblyAI.
 npx @skxv/transcribe
 ```
 
+Requires **Bun** (recommended) or **Node.js 26.1+**. On older Node versions, the CLI automatically re-runs via Bun when it is on your `PATH`.
+
 For local development:
 
 ```sh

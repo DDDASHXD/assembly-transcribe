@@ -1,13 +1,26 @@
 import { defineConfig } from "tsup"
 
-export default defineConfig({
-  entry: ["src/cli.ts"],
-  format: ["esm"],
+const shared = {
+  format: ["esm"] as const,
   target: "node18",
-  platform: "node",
-  clean: true,
+  platform: "node" as const,
   external: ["@opentui/core", "assemblyai"],
-  banner: {
-    js: "#!/usr/bin/env node",
+}
+
+export default defineConfig([
+  {
+    ...shared,
+    entry: ["src/launcher.ts"],
+    outDir: "dist",
+    clean: true,
+    banner: {
+      js: "#!/usr/bin/env node",
+    },
   },
-})
+  {
+    ...shared,
+    entry: ["src/cli.ts"],
+    outDir: "dist",
+    clean: false,
+  },
+])

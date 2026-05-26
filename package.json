@@ -1,6 +1,6 @@
 {
   "name": "@skxv/transcribe",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Terminal UI for transcribing local audio files with AssemblyAI",
   "type": "module",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "audio"
   ],
   "bin": {
-    "transcribe": "./dist/cli.js"
+    "transcribe": "./dist/launcher.js"
   },
   "files": [
     "dist"
